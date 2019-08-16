@@ -16,6 +16,7 @@ lazy val `lagom-api` = (project in file("lagom-api"))
       lagomScaladslApi
     )
   )
+.dependsOn(common)
 
 lazy val `lagom-impl` = (project in file("lagom-impl"))
   .enablePlugins(LagomScala)
@@ -30,3 +31,6 @@ lazy val `lagom-impl` = (project in file("lagom-impl"))
   )
   .settings(lagomForkedTestSettings)
   .dependsOn(`lagom-api`)
+  .dependsOn(common)
+
+lazy val common = (project in file("common"))

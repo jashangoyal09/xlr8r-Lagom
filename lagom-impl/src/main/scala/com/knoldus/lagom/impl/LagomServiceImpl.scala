@@ -1,5 +1,7 @@
 package com.knoldus.lagom.impl
 
-class LagomServiceImpl {
+import com.knoldus.lagom.api.LagomService
+
+trait LagomServiceImpl extends LagomService{
 
 }
